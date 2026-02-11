@@ -7,6 +7,8 @@ import edu.example.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/product")
@@ -17,5 +19,8 @@ public class ProductController {
     public Product save( @RequestBody Product product){
        return productService.saveProduct(product);
    }
-
+   @GetMapping
+    public List <Product> getAll(){
+       return productService.getAllProducts();
+   }
 }
