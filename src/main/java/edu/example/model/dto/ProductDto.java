@@ -1,6 +1,5 @@
-package edu.example.model;
+package edu.example.model.dto;
 
-import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Product {
-
+public class ProductDto {
     private Long id;
     private String name;
     private String description;
