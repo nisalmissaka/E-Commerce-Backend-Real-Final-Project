@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecommerce_backend_db
+    username: root
+    password: nisal
+
+  jpa:
+    hibernate:
+      ddl-auto:create
