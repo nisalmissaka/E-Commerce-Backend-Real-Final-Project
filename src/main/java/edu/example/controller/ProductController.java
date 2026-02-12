@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/product")
+@CrossOrigin
 public class ProductController {
    private final  ProductService productService ;
 
@@ -19,8 +20,12 @@ public class ProductController {
     public Product save( @RequestBody Product product){
        return productService.saveProduct(product);
    }
-   @GetMapping
+   @GetMapping("/get-all")
     public List <Product> getAll(){
        return productService.getAllProducts();
+   }
+   @PutMapping("/update/{id}")
+    public Product updateProduct (@PathVariable Long id ,@RequestBody Product product){
+       return productService.updateProducts(id,product);
    }
 }
